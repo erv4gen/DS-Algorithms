@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ML-Algorithm
+Version: 0.1.0
+Summary: Custom ML module with ML models/optimisators.
+Home-page: https://github.com/erv4gen/ML_Algorithms
+Author: Vladimir Eremin
+Author-email: eremin.vladimir.d@gmail.com
+License: MIT
+Description: 
+        # MyML
+        The following algorithms were written following the tutorial on [pythonprogramming.net](https://pythonprogramming.net/machine-learning-tutorials/)
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
