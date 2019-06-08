@@ -19,7 +19,7 @@ from tqdm import tqdm
 # evals = [(dtest, "Test")]
 # num_boost_round = 999
 
-class XGBoostOptimizer1:
+class XGBoostOptimizer:
     def __init__(self
                  ,dtrain = None
                  ,dtest = None
