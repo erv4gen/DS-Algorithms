@@ -17,7 +17,7 @@ DESCRIPTION = 'Custom ML module with ML models/optimisators.'
 URL = 'https://github.com/erv4gen/ML_Algorithms'
 EMAIL = 'eremin.vladimir.d@gmail.com'
 AUTHOR = 'Vladimir Eremin'
-REQUIRES_PYTHON = '>=3.6.0'
+REQUIRES_PYTHON = '>=3.5.0'
 VERSION = '0.1.0'
 
 # What packages are required for this module to be executed?

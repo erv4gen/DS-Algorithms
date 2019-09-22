@@ -1,7 +1,158 @@
+.gitattributes
+.gitignore
 README.md
+setup.py
+DataProcessing/DataStats.py
+DataProcessing/TimeProcessing.py
+DataProcessing/.ipynb_checkpoints/DataStats-checkpoint.py
+DataProcessing/.ipynb_checkpoints/TimeProcessing-checkpoint.py
+DeepLearn/RNN.ipynb
+DeepLearn/keras.ipynb
+DeepLearn/kerasCNN.ipynb
+DeepLearn/test_model.tf
+DeepLearn/tf_basics.ipynb
+DeepLearn/.ipynb_checkpoints/RNN-checkpoint.ipynb
+DeepLearn/.ipynb_checkpoints/keras-checkpoint.ipynb
+DeepLearn/.ipynb_checkpoints/kerasCNN-checkpoint.ipynb
+DeepLearn/.ipynb_checkpoints/tf_basics-checkpoint.ipynb
+DeepLearn/.ipynb_checkpoints/tf_nlp_run-checkpoint.ipynb
+DeepLearn/.ipynb_checkpoints/tf_nltk-checkpoint.ipynb
+DeepLearn/DL_NLP/pos_neg_class_big/nlp_run.py
+DeepLearn/DL_NLP/pos_neg_class_big/preprocessor.py
+DeepLearn/DL_NLP/pos_neg_class_small/Create_pickle.py
+DeepLearn/DL_NLP/pos_neg_class_small/nlp_run.py
+DeepLearn/DL_NLP/pos_neg_class_small/tf_nltk.py
+DeepLearn/__pycache__/tf_nltk.cpython-35.pyc
+DeepLearn/logs/dogs-vs-cats-64x2-1537744551/events.out.tfevents.1537744552.LAPTOP-4L5KTCLI
+DeepLearn/logs/dogs-vs-cats-64x2-1537745393/events.out.tfevents.1537745394.LAPTOP-4L5KTCLI
+DeepLearn/logs/dogs-vs-cats-64x2-1537746474/events.out.tfevents.1537746475.LAPTOP-4L5KTCLI
+Kmean/K-mean.ipynb
+Kmean/titanik_ds_kmean.ipynb
+Kmean/.ipynb_checkpoints/K-mean-checkpoint.ipynb
+Kmean/.ipynb_checkpoints/titanik_ds_kmean-checkpoint.ipynb
+KnearestNeigbors/K nearest neigbors.ipynb
+KnearestNeigbors/.ipynb_checkpoints/K nearest neigbors-checkpoint.ipynb
 ML_Algorithm.egg-info/PKG-INFO
 ML_Algorithm.egg-info/SOURCES.txt
 ML_Algorithm.egg-info/dependency_links.txt
 ML_Algorithm.egg-info/top_level.txt
+MeanShift/meanshift.ipynb
+MeanShift/titanik_ds_shiftk.ipynb
+Regression/Linear Regression.ipynb
+Regression/R_sqr.ipynb
+Regression/.ipynb_checkpoints/Linear Regression-checkpoint.ipynb
+SVM/SVM.ipynb
+SVM/.ipynb_checkpoints/SVM-checkpoint.ipynb
+Study/CourseraDS_course_p1/.DS_Store
+Study/CourseraDS_course_p1/Assignment 2.ipynb
+Study/CourseraDS_course_p1/Assignment 3.ipynb
+Study/CourseraDS_course_p1/Assignment 4.ipynb
+Study/CourseraDS_course_p1/CO-EST2015-alldata.pdf
+Study/CourseraDS_course_p1/City_Zhvi_AllHomes.csv
+Study/CourseraDS_course_p1/Energy Indicators.xls
+Study/CourseraDS_course_p1/Week 1.ipynb
+Study/CourseraDS_course_p1/Week 2.ipynb
+Study/CourseraDS_course_p1/Week 3.ipynb
+Study/CourseraDS_course_p1/Week 4.ipynb
+Study/CourseraDS_course_p1/cars.csv
+Study/CourseraDS_course_p1/census.csv
+Study/CourseraDS_course_p1/gdplev.xls
+Study/CourseraDS_course_p1/grades.csv
+Study/CourseraDS_course_p1/log.csv
+Study/CourseraDS_course_p1/log.txt
+Study/CourseraDS_course_p1/mpg.csv
+Study/CourseraDS_course_p1/olympics.csv
+Study/CourseraDS_course_p1/scimagojr-3.xlsx
+Study/CourseraDS_course_p1/university_towns.txt
+Study/CourseraDS_course_p1/world_bank.csv
+Study/CourseraDS_course_p1/.ipynb_checkpoints/Week 1-checkpoint.ipynb
+Study/CourseraDS_course_p1/.ipynb_checkpoints/Week 2-checkpoint.ipynb
+Study/CourseraDS_course_p1/.ipynb_checkpoints/Week 3-checkpoint.ipynb
+Study/CourseraDS_course_p2/Assignment3.ipynb
+Study/CourseraDS_course_p2/UnderstandingDistributionsThroughSampling.ipynb
+Study/CourseraDS_course_p2/Week2.ipynb
+Study/CourseraDS_course_p2/Week3.ipynb
+Study/CourseraDS_course_p2/Week4.ipynb
+Study/CourseraDS_course_p2/.ipynb_checkpoints/Assignment3-checkpoint.ipynb
+Study/CourseraDS_course_p2/.ipynb_checkpoints/DataVis-checkpoint.ipynb
+Study/CourseraDS_course_p2/.ipynb_checkpoints/Week3-checkpoint.ipynb
+Study/CourseraDS_course_p3/Assignment+1.ipynb
+Study/CourseraDS_course_p3/Assignment+2_my.ipynb
+Study/CourseraDS_course_p3/Assignment+3.ipynb
+Study/CourseraDS_course_p3/Assignment+4.ipynb
+Study/CourseraDS_course_p3/Classifier+Visualization.ipynb
+Study/CourseraDS_course_p3/Module+1.ipynb
+Study/CourseraDS_course_p3/Module+2.ipynb
+Study/CourseraDS_course_p3/Module+3.ipynb
+Study/CourseraDS_course_p3/Module+4.ipynb
+Study/CourseraDS_course_p3/Playground.ipynb
+Study/CourseraDS_course_p3/Unsupervised+Learning.ipynb
+Study/CourseraDS_course_p3/agaricus-lepiota.csv
+Study/CourseraDS_course_p3/fraud_data.csv
+Study/CourseraDS_course_p3/mushrooms.csv
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Assignment+1-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Assignment+2_my-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Assignment+3-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Assignment+4-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Module+2-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Module+3-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Module+4-checkpoint.ipynb
+Study/CourseraDS_course_p3/.ipynb_checkpoints/Playground-checkpoint.ipynb
+Study/CourseraDS_course_p4/.gitignore
+Study/CourseraDS_course_p4/Assignment+1.ipynb
+Study/CourseraDS_course_p4/Assignment+2.ipynb
+Study/CourseraDS_course_p4/Assignment+3.ipynb
+Study/CourseraDS_course_p4/Assignment+4.ipynb
+Study/CourseraDS_course_p4/Case+Study+-+Sentiment+Analysis.ipynb
+Study/CourseraDS_course_p4/Module+2+%28Python+3%29.ipynb
+Study/CourseraDS_course_p4/Regex+with+Pandas+and+Named+Groups.ipynb
+Study/CourseraDS_course_p4/Working+With+Text.ipynb
+Study/CourseraDS_course_p4/newsgroups
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Assignment+1-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Assignment+2-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Assignment+3-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Assignment+4-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Case+Study+-+Sentiment+Analysis-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Module+2+%28Python+3%29-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Regex+with+Pandas+and+Named+Groups-checkpoint.ipynb
+Study/CourseraDS_course_p4/.ipynb_checkpoints/Working+With+Text-checkpoint.ipynb
+Study/CourseraDS_course_p5/A4_graphs
+Study/CourseraDS_course_p5/Assignment+1.ipynb
+Study/CourseraDS_course_p5/Assignment+2.ipynb
+Study/CourseraDS_course_p5/Assignment+3.ipynb
+Study/CourseraDS_course_p5/Assignment+4-Copy1.ipynb
+Study/CourseraDS_course_p5/Assignment+4.ipynb
+Study/CourseraDS_course_p5/Employee_Movie_Choices.txt
+Study/CourseraDS_course_p5/Employee_Relationships.txt
+Study/CourseraDS_course_p5/Future_Connections.csv
+Study/CourseraDS_course_p5/G_adjlist.txt
+Study/CourseraDS_course_p5/G_edgelist.txt
+Study/CourseraDS_course_p5/Graph+Features.ipynb
+Study/CourseraDS_course_p5/Loading+Graphs+in+NetworkX.ipynb
+Study/CourseraDS_course_p5/Visualizing+Graphs+with+NetworkX.ipynb
+Study/CourseraDS_course_p5/blogs.gml
+Study/CourseraDS_course_p5/chess_graph.txt
+Study/CourseraDS_course_p5/email_network.txt
+Study/CourseraDS_course_p5/email_prediction.txt
+Study/CourseraDS_course_p5/friendships.gml
+Study/CourseraDS_course_p5/major_us_cities
+Study/CourseraDS_course_p5/playwithnx.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Assignment+1-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Assignment+2-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Assignment+3-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Assignment+4-Copy1-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Assignment+4-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Graph+Features-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Loading+Graphs+in+NetworkX-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/Visualizing+Graphs+with+NetworkX-checkpoint.ipynb
+Study/CourseraDS_course_p5/.ipynb_checkpoints/playwithnx-checkpoint.ipynb
 XGBoost/XGBoostOptimizer.py
 XGBoost/__init__.py
+XGBoost/xgboost-playground.ipynb
+XGBoost/.ipynb_checkpoints/XGBoostOptimizer-checkpoint.py
+XGBoost/.ipynb_checkpoints/xgboost-playground-checkpoint.ipynb
+XGBoost/__pycache__/XGBoostOptimizer.cpython-37.pyc
+XGBoost/__pycache__/__init__.cpython-37.pyc
+tsa/__init__.py
+tsa/tsalib.py
+tsa/.ipynb_checkpoints/tsalib-checkpoint.py

@@ -51,7 +51,7 @@ class XGBoostOptimizer:
         self.final_model = None
 
     def optimize_tree(self,level='complexity'):
-        print(f"Level selected = {level}")
+        print("Level selected = {}".format(level))
         if level =='complexity':
             #Tuning the complexity of the tree. 
             #max_depth and min_child_weight should be tuned together
@@ -90,7 +90,8 @@ class XGBoostOptimizer:
         print('Solving best parameters ...')
         time.sleep(1)
         for param0, param1 in tqdm(gridsearch_params):
-            print(f"CV with {param_to_opt[0]}={param0}, {param_to_opt[1]}={param1}")
+            print("CV with {}={}, {}={}".format(
+                    param_to_opt[0],param0,param_to_opt[1],param1))
             # Update our parameters
             cv_params[param_to_opt[0]] = param0
             if 'eta' not in param_to_opt:
@@ -108,15 +109,15 @@ class XGBoostOptimizer:
             )
             # Update best MAE
             if self.cv_metrics == 'auc':
-                mean_metric = cv_results[f'test-{self.cv_metrics}-mean'].max()
-                boost_rounds = cv_results[f'test-{self.cv_metrics}-mean'].argmax()
+                mean_metric = cv_results['test-{}-mean'.format(self.cv_metrics)].max()
+                boost_rounds = cv_results['test-{}-mean'.format(self.cv_metrics)].argmax()
                 if mean_metric > best_metric:
                     best_metric = mean_metric
                     best_params = (param0,param1)
                     
             else:
-                mean_metric = cv_results[f'test-{self.cv_metrics}-mean'].min()
-                boost_rounds = cv_results[f'test-{self.cv_metrics}-mean'].argmin()
+                mean_metric = cv_results['test-{}-mean'.format(self.cv_metrics)].min()
+                boost_rounds = cv_results['test-{}-mean'.format(self.cv_metrics)].argmin()
                 if mean_metric < best_metric:
                     best_metric = mean_metric
                     best_params = (param0,param1)
