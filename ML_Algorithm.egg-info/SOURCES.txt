@@ -35,6 +35,7 @@ KnearestNeigbors/.ipynb_checkpoints/K nearest neigbors-checkpoint.ipynb
 ML_Algorithm.egg-info/PKG-INFO
 ML_Algorithm.egg-info/SOURCES.txt
 ML_Algorithm.egg-info/dependency_links.txt
+ML_Algorithm.egg-info/requires.txt
 ML_Algorithm.egg-info/top_level.txt
 MeanShift/meanshift.ipynb
 MeanShift/titanik_ds_shiftk.ipynb

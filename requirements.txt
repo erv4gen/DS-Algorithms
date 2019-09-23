@@ -1,0 +1,10 @@
+pandas
+xgboost
+matplotlib
+tqdm
+statsmodels
+ipdb
+pandas_datareader
+statsmodels
+scipy
+arch
