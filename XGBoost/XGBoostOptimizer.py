@@ -33,19 +33,23 @@ class XGBoostOptimizer:
                             'eval_metrics': "rmse"
                                 }
 				 ,cv_metrics = "rmse"
+                 ,feval = None
                  ,early_stopping_round = 10
                  ,num_boost_round = 999
                  ,seed=42
+                 ,verbose = True
                  ,nfold=5
                 ):
         self.stage_metric = []
         self.dtrain = dtrain
         self.dtest = dtest
+        self.verbose = verbose
         self.params = params
         self.early_stopping_round = early_stopping_round
         self.num_boost_round = num_boost_round
         self.seed = seed
         self.nfold = nfold
+        self.feval = feval
         self.cv_metrics = cv_metrics
         self.stages = ['complexity','feature-samp','learning-rate']
         self.final_model = None
@@ -98,16 +102,30 @@ class XGBoostOptimizer:
                 cv_params[param_to_opt[1]] = param1
 
             # Run CV
-            cv_results = xgb.cv(
-                params = cv_params,
-                dtrain = self.dtrain,
-                num_boost_round=self.num_boost_round,
-                seed=self.seed,
-                nfold=self.nfold,
-                metrics=self.cv_metrics,
-                early_stopping_rounds=self.early_stopping_round
-            )
-            # Update best MAE
+            if self.feval is not None:
+                cv_results = xgb.cv(
+                    params = cv_params,
+                    dtrain = self.dtrain,
+                    num_boost_round=self.num_boost_round,
+                    seed=self.seed,
+                    nfold=self.nfold,
+                    feval = self.feval,
+                    verbose_eval  = self.verbose,
+                    early_stopping_rounds=self.early_stopping_round
+                )
+            else:
+                cv_results = xgb.cv(
+                    params = cv_params,
+                    dtrain = self.dtrain,
+                    num_boost_round=self.num_boost_round,
+                    verbose_eval  = self.verbose,
+                    seed=self.seed,
+                    nfold=self.nfold,
+                    metrics=self.cv_metrics,
+                    early_stopping_rounds=self.early_stopping_round
+                )
+                
+            # Update best error
             if self.cv_metrics == 'auc':
                 mean_metric = cv_results['test-{}-mean'.format(self.cv_metrics)].max()
                 boost_rounds = cv_results['test-{}-mean'.format(self.cv_metrics)].argmax()
