@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'ML_Algorithm'
+NAME = 'MLAlgorithms'
 DESCRIPTION = 'Custom ML module with ML models/optimisators.'
 URL = 'https://github.com/erv4gen/ML_Algorithms'
 EMAIL = 'eremin.vladimir.d@gmail.com'
