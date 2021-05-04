@@ -23,11 +23,16 @@ class XGBoostOptimizer:
     def __init__(self
                  ,dtrain = None
                  ,dtest = None
+                 ,params = {
+                            'max_depth': 6,
+                            'min_child_weight':1,
+                            'subsample':1,
+                            'colsample_bytree':1,
+                            'eta':.3,
+                            'objective':'binary:logistic',
+                            'eval_metrics': "rmse"
+                                }
 				 ,cv_metrics = "rmse"
-                 ,cv_max_depthr = (8,10)
-                 ,cv_min_childw = (5,10)
-                 ,cv_subsample = (7,11)
-                 ,cv_eta = [.3, .2, .1, .05, .01, .005]
                  ,feval = None
                  ,early_stopping_round = 10
                  ,num_boost_round = 999
@@ -39,26 +44,13 @@ class XGBoostOptimizer:
         self.dtrain = dtrain
         self.dtest = dtest
         self.verbose = verbose
-        
+        self.params = params
         self.early_stopping_round = early_stopping_round
         self.num_boost_round = num_boost_round
         self.seed = seed
         self.nfold = nfold
         self.feval = feval
         self.cv_metrics = cv_metrics
-        self.cv_max_depthr = cv_max_depthr
-        self.cv_min_childw = cv_min_childw
-        self.cv_subsample = cv_subsample
-        self.cv_eta = cv_eta
-        self.params =  {
-                        'max_depth': 6,
-                        'min_child_weight':1,
-                        'subsample':1,
-                        'colsample_bytree':1,
-                        'eta':.3,
-                        'objective':'binary:logistic',
-                        'eval_metrics': "rmse"
-                            }
         self.stages = ['complexity','feature-samp','learning-rate']
         self.final_model = None
 
@@ -69,22 +61,22 @@ class XGBoostOptimizer:
             #max_depth and min_child_weight should be tuned together
             gridsearch_params = [
                                     (max_depth, min_child_weight)
-                                    for max_depth in range(self.max_depthr[0],self.cv_max_depthr[1])  
-                                    for min_child_weight in range(self.min_childw[0],self.cv_min_childw[1])  
+                                    for max_depth in range(9,12)
+                                    for min_child_weight in range(5,8)
                                 ]
             param_to_opt = ['max_depth','min_child_weight']
         elif level == 'feature-samp':
             gridsearch_params = [
                                 (subsample, colsample)
-                                for subsample in [i/10. for i in range(self.cv_subsample[0],self.cv_subsample[1])  ] 
-                                for colsample in [i/10. for i in range(self.cv_subsample[0],self.cv_subsample[1])  ]
+                                for subsample in [i/10. for i in range(7,11)]
+                                for colsample in [i/10. for i in range(7,11)]
                             ][::-1]
             
             param_to_opt = ['subsample','colsample_bytree']
         elif level =='learning-rate':
             gridsearch_params = [
                                 (eta, -1)
-                                for eta in self.cv_eta
+                                for eta in [.3, .2, .1, .05, .01, .005]
                                 ]
             param_to_opt = ['eta','None']
         else:
