@@ -24,6 +24,7 @@ class XGBoostOptimizer:
                  ,dtrain = None
                  ,dtest = None
 				 ,cv_metrics = "rmse"
+                 ,objective = 'binary:logistic'
                  ,cv_max_depthr = (8,10)
                  ,cv_min_childw = (5,10)
                  ,cv_subsample = (7,11)
@@ -45,6 +46,7 @@ class XGBoostOptimizer:
         self.seed = seed
         self.nfold = nfold
         self.feval = feval
+        
         self.cv_metrics = cv_metrics
         self.cv_max_depthr = cv_max_depthr
         self.cv_min_childw = cv_min_childw
@@ -56,9 +58,10 @@ class XGBoostOptimizer:
                         'subsample':1,
                         'colsample_bytree':1,
                         'eta':.3,
-                        'objective':'binary:logistic',
-                        'eval_metrics': "rmse"
                             }
+        self.params['objective'] = objective
+        
+            
         self.stages = ['complexity','feature-samp','learning-rate']
         self.final_model = None
 
@@ -69,8 +72,8 @@ class XGBoostOptimizer:
             #max_depth and min_child_weight should be tuned together
             gridsearch_params = [
                                     (max_depth, min_child_weight)
-                                    for max_depth in range(self.max_depthr[0],self.cv_max_depthr[1])  
-                                    for min_child_weight in range(self.min_childw[0],self.cv_min_childw[1])  
+                                    for max_depth in range(self.cv_max_depthr[0],self.cv_max_depthr[1])  
+                                    for min_child_weight in range(self.cv_min_childw[0],self.cv_min_childw[1])  
                                 ]
             param_to_opt = ['max_depth','min_child_weight']
         elif level == 'feature-samp':
@@ -176,6 +179,7 @@ class XGBoostOptimizer:
         print("Finished optimization.\nBest params:",self.params)
         
         if refit:
+            self.params['eval_metrics'] = self.cv_metrics
             self.final_model = xgb.train(
                 params=self.params,
                 dtrain=self.dtrain,
